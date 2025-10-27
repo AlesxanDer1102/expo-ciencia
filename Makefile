@@ -24,5 +24,5 @@ snapshot :; forge snapshot
 
 format :; forge fmt
 
-anvil :; anvil -m 'test test test test test test test test test test test junk' --steps-tracing --block-time 1
-
+deploy:
+	forge script script/Deploy.s.sol:Deploy --rpc-url $(SEPOLIA_RPC_URL) --account dev --broadcast --verify --etherscan-api-key $(ETHERSCAN_API_KEY)
